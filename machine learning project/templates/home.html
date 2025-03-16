@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Iris Prediction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://png.pngtree.com/background/20230512/original/pngtree-an-iris-in-the-dark-is-covered-in-drops-of-water-picture-image_2503753.jpg'); /* Background image URL */
+            background-size: cover; 
+            background-position: center; 
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+    font-size: 4.5rem;
+    color:white;
+    animation: bouncing 1.5s ease infinite;
+    box-shadow: black;
+}
+
+
+@keyframes bouncing {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Iris Prediction</h1>
+    <a href="/predict_page" class="btn">Find Your Species</a>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Species Prediction</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('data:image/jpeg;base64,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'); /* Add your image path here */
+    background-size: cover; 
+    background-position: center; 
+    text-align: center;
+    flex-direction: column;
+}
+input::placeholder {
+  color:white; 
+}
+
+
+        h1 {
+            font-size: 3.5rem;
+            color:black;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 1rem;
+            width: 200px;
+            background-color: transparent;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 3rem;
+            color:white;
+        }
+
+        .home-link {
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            color:white;
+        }
+
+        .home-link:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IRIS SPECIES PREDICTION</h1>
+
+    <form action="/predict" method="post">
+        <input type="text" name="sepal_length" placeholder="Sepal Length" required>
+        <input type="text" name="sepal_width" placeholder="Sepal Width" required>
+        <input type="text" name="petal_length" placeholder="Petal Length" required>
+        <input type="text" name="petal_width" placeholder="Petal Width" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <a href="/" class="home-link">Back to Home</a>
+    
+        <script>
+        // Clear result on page refresh
+        window.onload = function() {
+            document.getElementById("result").innerHTML = "";
+        };
+
+        // Simulate the prediction result on form submit
+        document.getElementById("predictionForm").onsubmit = function(event) {
+            event.preventDefault();
+            
+            // Get input values
+            const sepalLength = parseFloat(document.getElementById("sepalLength").value);
+            const sepalWidth = parseFloat(document.getElementById("sepalWidth").value);
+            const petalLength = parseFloat(document.getElementById("petalLength").value);
+            const petalWidth = parseFloat(document.getElementById("petalWidth").value);
+            
+            // For now, simulate a prediction based on some conditions (mock prediction)
+            let prediction = "Unknown";
+            if (petalLength < 2.0) {
+                prediction = "Iris Setosa";
+            } else if (petalLength < 5.0) {
+                prediction = "Iris Versicolor";
+            } else {
+                prediction = "Iris Virginica";
+            }
+
+            // Display the result
+            document.getElementById("result").innerHTML = `Predicted Species: ${prediction}`;
+        };
+    </script>
+
+
+</body>
+</html>
